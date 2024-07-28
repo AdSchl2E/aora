@@ -26,7 +26,7 @@ const Welcome = () => {
           <View className="relative mt-5">
 
             <Image
-              source={images.presentation}
+              source={images.cards}
               className="w-60 h-60"
               resizeMode="contain"
             />
@@ -49,7 +49,7 @@ const Welcome = () => {
         </View>
       </ScrollView>
 
-      <StatusBar backgroundColor="#161622" style="light" />
+      <StatusBar backgroundColor="#ecedff" style="dark" />
     </SafeAreaView>
   );
 };

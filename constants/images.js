@@ -5,6 +5,5 @@ import path from "../assets/images/path.png";
 import logo from "../assets/images/logo.png";
 import logoSmall from "../assets/images/logo-small.png";
 import empty from "../assets/images/empty.png";
-import presentation from ".../assets/images/presentation.png";
 
-export default { profile, thumbnail, cards, path, logo, logoSmall, empty, presentation };
+export default { profile, thumbnail, cards, path, logo, logoSmall, empty };
