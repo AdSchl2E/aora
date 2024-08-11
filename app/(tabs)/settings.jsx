@@ -4,13 +4,13 @@ import { View, Image, Text, TouchableOpacity } from "react-native";
 
 import { icons } from "../../constants";
 
-const Profile = () => {
+const Settings = () => {
 
     return (
         <SafeAreaView className="bg-primary">
             <View className="flex items-center">
                 <Image
-                    source={icons.profile}
+                    source={icons.settings}
                     className="w-28 h-28 mt-10"
                     resizeMode="contain"
                 />
@@ -36,4 +36,4 @@ const Profile = () => {
     );
 };
 
-export default Profile;
+export default Settings;
