@@ -5,11 +5,9 @@ import { View, Text, ScrollView, Dimensions, Alert, Image } from "react-native";
 
 import { images } from "../../constants";
 import { CustomButton, FormField } from "../../components";
-import { getCurrentUser, signIn } from "../../lib/appwrite";
-import { useGlobalContext } from "../../context/GlobalProvider";
 
 const SignIn = () => {
-  const { setUser, setIsLogged } = useGlobalContext();
+
   const [isSubmitting, setSubmitting] = useState(false);
   const [form, setForm] = useState({
     email: "",
@@ -25,12 +23,9 @@ const SignIn = () => {
 
     try {
       await signIn(form.email, form.password);
-      const result = await getCurrentUser();
-      setUser(result);
-      setIsLogged(true);
 
       Alert.alert("Connexion", "Vous vous êtes connecté avec succès !");
-      router.replace("/home");
+
     } catch (error) {
       Alert.alert("Erreur", error.message);
     } finally {
