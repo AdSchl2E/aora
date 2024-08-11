@@ -6,14 +6,6 @@ import { icons } from "../../constants";
 
 const Profile = () => {
 
-  const logout = async () => {
-    await signOut();
-    setUser(null);
-    setIsLogged(false);
-
-    router.replace("/sign-in");
-  };
-
   return (
     <SafeAreaView className="bg-primary">
       <View className="flex items-center">
@@ -32,7 +24,7 @@ const Profile = () => {
           </View>
 
           <TouchableOpacity
-            onPress={logout}
+            onPress={() => { router.push("/sign-in") }}
             className="flex items-center mt-2"
           >
             <Text className="text-sm font-pmedium text-gray">Déconnexion</Text>
